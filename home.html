@@ -17,24 +17,31 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/works.css">
   <link rel="stylesheet" href="css/adventure-artworks.css">
+
+  <!-- theme.js is loaded before body to avoid flash of wrong theme -->
+  <script src="js/theme.js"></script>
 </head>
 <body class="works-page">
-  <!-- Header -->
+
+  <!-- ========== HEADER ========== -->
   <header class="site-header">
     <div class="header-content">
+
+      <!-- Logo / Home Link -->
       <a href="index.html" class="site-logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
         <span>Chester Vonne D. Cairel</span>
       </a>
 
-      <nav class="main-nav">
-        <a href="home.html" class="nav-link active">Home</a>
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="home.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="assets/resume/ChesterCV.pdf" download class="resume-btn" title="Download Resume">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -46,12 +53,15 @@
           <span class="moon-emoji">🌙</span>
         </button>
       </nav>
+
     </div>
   </header>
+  <!-- /HEADER -->
 
-  <!-- Main Content -->
+  <!-- ========== MAIN CONTENT ========== -->
   <main class="main-content">
     <div class="container">
+
       <!-- Hero Section -->
       <section class="hero-section">
         <h1 class="page-title">Home Page</h1>
@@ -62,9 +72,10 @@
         <span>My Adventures in Code</span>
       </div>
 
-      <!-- Projects Grid -->
-      <section class="projects-grid">
-        <!-- Project Card 1 - Sky Adventure -->
+      <!-- ========== PROJECTS GRID ========== -->
+      <section class="projects-grid" aria-label="Projects">
+
+        <!-- Project Card 1 — Sky Adventure -->
         <article class="project-card">
           <div class="project-info">
             <h2 class="project-title">Project One</h2>
@@ -84,7 +95,7 @@
             <div class="project-links">
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn primary-btn">
                 <span>Live Demo</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -92,12 +103,14 @@
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">
                 <span>GitHub</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
               </a>
             </div>
           </div>
+
+          <!-- Artwork Preview -->
           <div class="project-preview">
             <div class="adventure-artwork artwork-sky">
               <div class="artwork-cloud cloud-a">☁️</div>
@@ -108,7 +121,7 @@
           </div>
         </article>
 
-        <!-- Project Card 2 - Candy Kingdom -->
+        <!-- Project Card 2 — Candy Kingdom -->
         <article class="project-card">
           <div class="project-info">
             <h2 class="project-title">Project Two</h2>
@@ -128,7 +141,7 @@
             <div class="project-links">
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn primary-btn">
                 <span>Live Demo</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -136,12 +149,14 @@
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">
                 <span>GitHub</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
               </a>
             </div>
           </div>
+
+          <!-- Artwork Preview -->
           <div class="project-preview">
             <div class="adventure-artwork artwork-candy">
               <div class="artwork-candy-piece candy-1">🍬</div>
@@ -153,7 +168,7 @@
           </div>
         </article>
 
-        <!-- Project Card 3 - Grasslands -->
+        <!-- Project Card 3 — Grasslands -->
         <article class="project-card">
           <div class="project-info">
             <h2 class="project-title">Project Three</h2>
@@ -173,7 +188,7 @@
             <div class="project-links">
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn primary-btn">
                 <span>Live Demo</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -181,12 +196,14 @@
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">
                 <span>GitHub</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
               </a>
             </div>
           </div>
+
+          <!-- Artwork Preview -->
           <div class="project-preview">
             <div class="adventure-artwork artwork-grass">
               <div class="artwork-tree">🌳</div>
@@ -197,7 +214,7 @@
           </div>
         </article>
 
-        <!-- Project Card 4 - Ice Kingdom -->
+        <!-- Project Card 4 — Ice Kingdom -->
         <article class="project-card">
           <div class="project-info">
             <h2 class="project-title">Project Four</h2>
@@ -217,7 +234,7 @@
             <div class="project-links">
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn primary-btn">
                 <span>Live Demo</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -225,12 +242,14 @@
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">
                 <span>GitHub</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
               </a>
             </div>
           </div>
+
+          <!-- Artwork Preview -->
           <div class="project-preview">
             <div class="adventure-artwork artwork-ice">
               <div class="artwork-snowflake snow-1">❄️</div>
@@ -240,12 +259,15 @@
             </div>
           </div>
         </article>
+
       </section>
+      <!-- /PROJECTS GRID -->
+
     </div>
   </main>
+  <!-- /MAIN CONTENT -->
 
   <!-- Scripts -->
-  <script src="js/theme.js"></script>
   <script src="js/navigation.js"></script>
 </body>
 </html>

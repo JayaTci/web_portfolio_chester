@@ -1,7 +1,18 @@
-// Navigation and Interactions
-
+/**
+ * Navigation and Page Interactions
+ *
+ * Handles three shared behaviors used on the home and about pages:
+ *   1. Accordion toggle — expand/collapse the "Let's Connect" section
+ *   2. Email copy — copy email address to clipboard with visual feedback
+ *   3. Active nav link — highlights the current page link in the header
+ */
 document.addEventListener('DOMContentLoaded', () => {
-  // Accordion functionality
+
+  /* ============================
+     ACCORDION TOGGLE
+     Toggles the aria-expanded attribute on accordion trigger buttons.
+     CSS uses the attribute value to animate the content panel open/closed.
+     ============================ */
   const accordionTriggers = document.querySelectorAll('.accordion-trigger');
 
   accordionTriggers.forEach(trigger => {
@@ -11,7 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Email copy functionality
+  /* ============================
+     EMAIL COPY TO CLIPBOARD
+     Uses the modern Clipboard API with a fallback for older browsers
+     that require the deprecated execCommand approach.
+     ============================ */
   const emailCopyBtn = document.querySelector('.email-copy-btn');
 
   if (emailCopyBtn) {
@@ -19,30 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = emailCopyBtn.getAttribute('data-email');
 
       try {
+        // Modern approach: Clipboard API (requires HTTPS or localhost)
         await navigator.clipboard.writeText(email);
-        emailCopyBtn.classList.add('copied');
-
-        setTimeout(() => {
-          emailCopyBtn.classList.remove('copied');
-        }, 2000);
+        showCopiedFeedback(emailCopyBtn);
       } catch (err) {
         console.error('Failed to copy email:', err);
-        // Fallback for older browsers
+
+        // Fallback: create a temporary textarea, select its content, and copy
         const textArea = document.createElement('textarea');
         textArea.value = email;
-        textArea.style.position = 'fixed';
-        textArea.style.opacity = '0';
+        textArea.style.position = 'fixed';  // Prevent page scroll jump
+        textArea.style.opacity = '0';       // Keep it invisible
         document.body.appendChild(textArea);
         textArea.focus();
         textArea.select();
 
         try {
           document.execCommand('copy');
-          emailCopyBtn.classList.add('copied');
-
-          setTimeout(() => {
-            emailCopyBtn.classList.remove('copied');
-          }, 2000);
+          showCopiedFeedback(emailCopyBtn);
         } catch (err2) {
           console.error('Fallback copy failed:', err2);
         }
@@ -52,7 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Set active nav link based on current page
+  /**
+   * Briefly adds the `.copied` class to the button to show visual feedback,
+   * then removes it after 2 seconds.
+   * @param {HTMLElement} btn - The button element to apply feedback to.
+   */
+  function showCopiedFeedback(btn) {
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.classList.remove('copied');
+    }, 2000);
+  }
+
+  /* ============================
+     ACTIVE NAV LINK
+     Compares the current page filename against each nav link's href
+     to mark the matching link as active.
+     ============================ */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-link');
 

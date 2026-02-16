@@ -15,66 +15,67 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/works.css">
   <link rel="stylesheet" href="css/about.css">
+
+  <!-- theme.js is loaded before body to avoid flash of wrong theme -->
+  <script src="js/theme.js"></script>
 </head>
 <body class="about-page">
-  <!-- Header -->
+
+  <!-- ========== HEADER ========== -->
   <header class="site-header">
     <div class="header-content">
+
+      <!-- Logo / Home Link -->
       <a href="index.html" class="site-logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
         <span>Chester Vonne D. Cairel</span>
       </a>
 
-      <nav class="main-nav">
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="home.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="assets/resume/ChesterCV.pdf" download class="resume-btn" title="Download Resume">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
           <span>Resume</span>
         </a>
-        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle light/dark theme">
-          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle day/night" title="Toggle day and night mode">
+          <span class="sun-emoji">☀️</span>
+          <span class="moon-emoji">🌙</span>
         </button>
       </nav>
+
     </div>
   </header>
+  <!-- /HEADER -->
 
-  <!-- Main Content -->
+  <!-- ========== MAIN CONTENT ========== -->
   <main class="main-content">
     <div class="container">
+
       <!-- Hero Section -->
       <section class="hero-section">
         <h1 class="page-title">About me</h1>
       </section>
 
-      <!-- About Content -->
+      <!-- ========== ABOUT CONTENT ========== -->
       <section class="about-content">
-        <!-- Skills Section -->
+
+        <!-- ========== SKILLS SECTION ========== -->
         <div class="skills-section">
           <h2 class="section-heading">Technical Skills</h2>
 
           <div class="skills-grid">
+
             <!-- Languages -->
             <div class="skill-category">
               <h3 class="skill-category-title">Languages</h3>
@@ -83,13 +84,13 @@
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">MYSQL</span>
+                <span class="skill-tag">MySQL</span>
               </div>
             </div>
 
-            <!-- OTHER SKILLS -->
+            <!-- Other Skills -->
             <div class="skill-category">
-              <h3 class="skill-category-title">OTHER SKILLS</h3>
+              <h3 class="skill-category-title">Other Skills</h3>
               <div class="skill-tags">
                 <span class="skill-tag">AI-Assisted Development</span>
                 <span class="skill-tag">Problem Solving</span>
@@ -99,9 +100,9 @@
               </div>
             </div>
 
-            <!-- DEVELOPMENT TOOLS -->
+            <!-- Development Tools -->
             <div class="skill-category">
-              <h3 class="skill-category-title">DEVELOPMENT TOOLS</h3>
+              <h3 class="skill-category-title">Development Tools</h3>
               <div class="skill-tags">
                 <span class="skill-tag">GitHub</span>
                 <span class="skill-tag">Visual Studio 2022</span>
@@ -111,20 +112,23 @@
               </div>
             </div>
 
-            <!-- IT & TECHNICAL SKILLS -->
+            <!-- IT & Technical Skills -->
             <div class="skill-category">
-              <h3 class="skill-category-title">IT & TECHNICAL SKILLS</h3>
+              <h3 class="skill-category-title">IT &amp; Technical Skills</h3>
               <div class="skill-tags">
-                <span class="skill-tag">IT Support & Troubleshooting</span>
+                <span class="skill-tag">IT Support &amp; Troubleshooting</span>
                 <span class="skill-tag">Network Configuration</span>
                 <span class="skill-tag">Windows Administration</span>
                 <span class="skill-tag">Remote Support Tools</span>
-                 <span class="skill-tag">VPN Setup</span>
+                <span class="skill-tag">VPN Setup</span>
               </div>
             </div>
+
           </div>
         </div>
+        <!-- /SKILLS SECTION -->
 
+        <!-- ========== BIO SECTION ========== -->
         <div class="bio-section">
           <p class="bio-text">
             Hi! I'm Chester Vonne Cairel, a Computer Science graduate who loves building things with code, based in Tagum City, Davao Del Norte.
@@ -142,57 +146,64 @@
             I like to experiment with modern development workflows, embrace new tools and technologies, and keep learning through building real projects.
           </p>
         </div>
+        <!-- /BIO SECTION -->
 
-        <!-- Contact Section -->
+        <!-- ========== CONTACT SECTION ========== -->
         <div class="contact-section">
-          <p class="contact-text">
-            You can reach me through the following platforms:
-          </p>
+          <p class="contact-text">You can reach me through the following platforms:</p>
           <p class="contact-note">
-           Feel free to reach out through any of the following platforms. I'll do my best to respond, though reply times may vary depending on my schedule!
+            Feel free to reach out through any of the following platforms. I'll do my best to respond, though reply times may vary depending on my schedule!
           </p>
         </div>
 
         <!-- Social Links -->
         <div class="social-links">
+
           <a href="https://www.linkedin.com/in/chester-vonne-cairel-3b7023318/" target="_blank" rel="noopener noreferrer" class="social-link">
-            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
             <span>LinkedIn</span>
           </a>
+
           <a href="https://x.com/Cairel11918346" target="_blank" rel="noopener noreferrer" class="social-link">
-            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
             </svg>
             <span>Twitter (X)</span>
           </a>
+
           <a href="https://github.com/JayaTci" target="_blank" rel="noopener noreferrer" class="social-link">
-            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
             <span>GitHub</span>
           </a>
+
           <a href="https://www.instagram.com/chesterr2001/" target="_blank" rel="noopener noreferrer" class="social-link">
-            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
             <span>Instagram</span>
           </a>
+
+          <!-- Email copy button — copies address to clipboard on click -->
           <button class="social-link email-copy-btn" data-email="cairelchestervonne.d@gmail.com">
-            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
             <span>Email (Click to Copy)</span>
           </button>
-        </div>
 
-        <!-- Accordion Section -->
+        </div>
+        <!-- /SOCIAL LINKS -->
+
+        <!-- ========== ACCORDION — LET'S CONNECT ========== -->
         <div class="accordion-section">
           <button class="accordion-trigger" aria-expanded="false">
             <span class="accordion-icon">+</span>
@@ -202,16 +213,16 @@
             <div class="accordion-inner">
               <p class="bio-text">
                 I'm currently exploring web development and always excited to connect with others in the tech community. Feel free to reach out to discuss projects, share ideas, or talk about anything tech-related!
-
               </p>
               <p class="bio-text">
-                Whether you want to talk about code, share ideas, or just say hi – I'd love to hear from you! Drop me a message on any platform listed above.
+                Whether you want to talk about code, share ideas, or just say hi — I'd love to hear from you! Drop me a message on any platform listed above.
               </p>
             </div>
           </div>
         </div>
+        <!-- /ACCORDION -->
 
-        <!-- Contact Form Section -->
+        <!-- ========== CONTACT FORM ========== -->
         <div class="contact-form-section">
           <h2 class="section-heading">Send Me a Message</h2>
           <p class="contact-form-intro">
@@ -219,6 +230,7 @@
           </p>
 
           <form class="contact-form" id="contactForm">
+
             <div class="form-group">
               <label for="name" class="form-label">Name *</label>
               <input
@@ -271,15 +283,21 @@
               <span class="btn-icon">→</span>
             </button>
 
+            <!-- Status message shown after form submission -->
             <div class="form-status" id="formStatus"></div>
+
           </form>
         </div>
+        <!-- /CONTACT FORM -->
+
       </section>
+      <!-- /ABOUT CONTENT -->
+
     </div>
   </main>
+  <!-- /MAIN CONTENT -->
 
   <!-- Scripts -->
-  <script src="js/theme.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/contact-form.js"></script>
 </body>

@@ -16,9 +16,13 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/intro.css">
+
+  <!-- theme.js is loaded before body to avoid flash of wrong theme -->
+  <script src="js/theme.js"></script>
 </head>
 <body class="intro-page">
-  <!-- Theme Toggle -->
+
+  <!-- ========== THEME TOGGLE ========== -->
   <div class="theme-toggle">
     <button id="theme-toggle-btn" aria-label="Toggle day/night" title="Toggle day and night mode">
       <span class="sun-emoji">☀️</span>
@@ -26,16 +30,15 @@
     </button>
   </div>
 
-  <!-- Main Intro Container -->
+  <!-- ========== INTRO CONTAINER ========== -->
   <main class="intro-container">
-    <!-- Animated Background Elements -->
+
+    <!-- Animated Background (clouds, stars) -->
     <div class="bg-elements">
-      <!-- Floating Clouds -->
       <div class="cloud cloud-1">☁️</div>
       <div class="cloud cloud-2">☁️</div>
       <div class="cloud cloud-3">☁️</div>
 
-      <!-- Twinkling Stars -->
       <div class="star star-1">⭐</div>
       <div class="star star-2">✨</div>
       <div class="star star-3">⭐</div>
@@ -43,24 +46,29 @@
       <div class="star star-5">⭐</div>
     </div>
 
-    <!-- Grass Hills at Bottom -->
+    <!-- Grass Hills (bottom decoration) -->
     <div class="grass-hills">
       <div class="hill hill-1"></div>
       <div class="hill hill-2"></div>
       <div class="hill hill-3"></div>
     </div>
 
+    <!-- ========== MAIN CONTENT ========== -->
     <div class="intro-content">
-      <!-- Welcome Text -->
+
+      <!-- Welcome Title -->
       <div class="welcome-text">
-        <h1 class="adventure-title">🎒 Welcome to my digital playground!
-        🗡️</h1>
+        <h1 class="adventure-title">🎒 Welcome to my digital playground! 🗡️</h1>
       </div>
 
-      <!-- Main Illustration -->
+      <!-- Hero Illustration -->
       <div class="illustration-wrapper">
         <div class="illustration-frame">
-          <img src="assets/images/intro-illustration.png" alt="Adventure Illustration" class="intro-illustration">
+          <img
+            src="assets/images/intro-illustration.png"
+            alt="Adventure illustration"
+            class="intro-illustration"
+          >
         </div>
       </div>
 
@@ -75,17 +83,20 @@
         </button>
         <p class="enter-hint">Click to start the adventure</p>
       </div>
-    </div>
 
-    <!-- Floating Elements -->
+    </div>
+    <!-- /MAIN CONTENT -->
+
+    <!-- Floating Decorative Emojis -->
     <div class="floating-emoji emoji-1">🎮</div>
     <div class="floating-emoji emoji-2">🎨</div>
     <div class="floating-emoji emoji-3">💻</div>
     <div class="floating-emoji emoji-4">🎪</div>
+
   </main>
+  <!-- /INTRO CONTAINER -->
 
   <!-- Scripts -->
-  <script src="js/theme.js"></script>
   <script src="js/intro.js"></script>
 </body>
 </html>

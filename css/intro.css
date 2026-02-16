@@ -1,5 +1,11 @@
-/* Adventure Time Intro Page */
+/* ==============================================
+   INTRO / LANDING PAGE STYLES
+   Adventure Time-themed intro animation and layout
+   ============================================== */
 
+/* ======================
+   PAGE LAYOUT
+   ====================== */
 .intro-page {
   overflow: hidden;
   position: relative;
@@ -19,18 +25,21 @@
   overflow: hidden;
 }
 
+/* Fade-out animation triggered before page navigation */
 .intro-container.fade-out {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Dark Theme Background - Nightosphere */
+/* Dark Theme — Nightosphere */
 [data-theme="dark"] .intro-container {
   background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
-/* Background Elements */
+/* ======================
+   BACKGROUND ELEMENTS
+   ====================== */
 .bg-elements {
   position: absolute;
   top: 0;
@@ -41,7 +50,9 @@
   z-index: 1;
 }
 
-/* Floating Clouds */
+/* ======================
+   FLOATING CLOUDS
+   ====================== */
 .cloud {
   position: absolute;
   font-size: 3rem;
@@ -79,7 +90,10 @@
   }
 }
 
-/* Twinkling Stars */
+/* ======================
+   TWINKLING STARS
+   Hidden by default, visible in dark mode
+   ====================== */
 .star {
   position: absolute;
   font-size: 1.5rem;
@@ -91,35 +105,11 @@
   opacity: 1;
 }
 
-.star-1 {
-  top: 15%;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.star-2 {
-  top: 25%;
-  right: 25%;
-  animation-delay: 1s;
-}
-
-.star-3 {
-  top: 35%;
-  left: 15%;
-  animation-delay: 2s;
-}
-
-.star-4 {
-  top: 45%;
-  right: 30%;
-  animation-delay: 1.5s;
-}
-
-.star-5 {
-  top: 55%;
-  left: 25%;
-  animation-delay: 0.5s;
-}
+.star-1 { top: 15%; left: 20%;  animation-delay: 0s;   }
+.star-2 { top: 25%; right: 25%; animation-delay: 1s;   }
+.star-3 { top: 35%; left: 15%;  animation-delay: 2s;   }
+.star-4 { top: 45%; right: 30%; animation-delay: 1.5s; }
+.star-5 { top: 55%; left: 25%;  animation-delay: 0.5s; }
 
 @keyframes twinkle {
   0%, 100% {
@@ -132,7 +122,10 @@
   }
 }
 
-/* Grass Hills at Bottom */
+/* ======================
+   GRASS HILLS
+   Decorative hills at the bottom of the page
+   ====================== */
 .grass-hills {
   position: absolute;
   bottom: 0;
@@ -154,28 +147,13 @@
   background: #2B5F5F;
 }
 
-.hill-1 {
-  left: -10%;
-  width: 40%;
-  height: 120px;
-  opacity: 0.8;
-}
+.hill-1 { left: -10%;  width: 40%; height: 120px; opacity: 0.8; }
+.hill-2 { left: 25%;   width: 50%; height: 100px; opacity: 0.9; }
+.hill-3 { right: -5%;  width: 35%; height: 130px; opacity: 0.7; }
 
-.hill-2 {
-  left: 25%;
-  width: 50%;
-  height: 100px;
-  opacity: 0.9;
-}
-
-.hill-3 {
-  right: -5%;
-  width: 35%;
-  height: 130px;
-  opacity: 0.7;
-}
-
-/* Main Content */
+/* ======================
+   MAIN CONTENT
+   ====================== */
 .intro-content {
   position: relative;
   z-index: 10;
@@ -190,34 +168,21 @@
 }
 
 @keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.8) translateY(50px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.05) translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+  0%   { opacity: 0; transform: scale(0.8) translateY(50px); }
+  60%  { opacity: 1; transform: scale(1.05) translateY(-10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Welcome Title */
+/* ======================
+   WELCOME TITLE
+   ====================== */
 .welcome-text {
   animation: slideDown 0.8s var(--ease-out-expo) 0.2s backwards;
 }
 
 @keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .adventure-title {
@@ -243,15 +208,13 @@
 }
 
 @keyframes wiggle {
-  0%, 100% {
-    transform: rotate(-1deg);
-  }
-  50% {
-    transform: rotate(1deg);
-  }
+  0%, 100% { transform: rotate(-1deg); }
+  50%       { transform: rotate(1deg); }
 }
 
-/* Illustration */
+/* ======================
+   ILLUSTRATION
+   ====================== */
 .illustration-wrapper {
   position: relative;
   max-width: 900px;
@@ -260,17 +223,9 @@
 }
 
 @keyframes popIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) rotate(-5deg);
-  }
-  70% {
-    transform: scale(1.05) rotate(2deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
+  0%   { opacity: 0; transform: scale(0.5) rotate(-5deg); }
+  70%  { transform: scale(1.05) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
 .illustration-frame {
@@ -317,7 +272,9 @@
   display: block;
 }
 
-/* Intro Tagline */
+/* ======================
+   TAGLINE
+   ====================== */
 .intro-tagline {
   font-size: 1.125rem;
   font-weight: 500;
@@ -334,7 +291,9 @@
   opacity: 0.9;
 }
 
-/* Enter Section */
+/* ======================
+   ENTER BUTTON
+   ====================== */
 .enter-section {
   display: flex;
   flex-direction: column;
@@ -344,14 +303,8 @@
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .enter-button {
@@ -414,14 +367,11 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.02); }
 }
 
+/* Hint text below the button */
 .enter-hint {
   font-size: 0.9rem;
   color: var(--color-text);
@@ -430,15 +380,14 @@
 }
 
 @keyframes blink {
-  0%, 100% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.3;
-  }
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 0.3; }
 }
 
-/* Theme Toggle */
+/* ======================
+   THEME TOGGLE BUTTON
+   Fixed position on the intro page only
+   ====================== */
 .theme-toggle {
   position: fixed;
   top: var(--spacing-lg);
@@ -482,21 +431,10 @@
     12px 12px 20px rgba(0, 0, 0, 0.5);
 }
 
-.sun-emoji,
-.moon-emoji {
-  display: block;
-  line-height: 1;
-}
-
-[data-theme="light"] .moon-emoji {
-  display: none;
-}
-
-[data-theme="dark"] .sun-emoji {
-  display: none;
-}
-
-/* Floating Emojis */
+/* ======================
+   FLOATING EMOJIS
+   Decorative ambient elements around the intro
+   ====================== */
 .floating-emoji {
   position: absolute;
   font-size: 2.5rem;
@@ -505,40 +443,19 @@
   pointer-events: none;
 }
 
-.emoji-1 {
-  top: 20%;
-  left: 8%;
-  animation-delay: 0s;
-}
-
-.emoji-2 {
-  top: 30%;
-  right: 10%;
-  animation-delay: 1s;
-}
-
-.emoji-3 {
-  bottom: 25%;
-  left: 12%;
-  animation-delay: 2s;
-}
-
-.emoji-4 {
-  bottom: 35%;
-  right: 8%;
-  animation-delay: 1.5s;
-}
+.emoji-1 { top: 20%;    left: 8%;   animation-delay: 0s;   }
+.emoji-2 { top: 30%;    right: 10%; animation-delay: 1s;   }
+.emoji-3 { bottom: 25%; left: 12%;  animation-delay: 2s;   }
+.emoji-4 { bottom: 35%; right: 8%;  animation-delay: 1.5s; }
 
 @keyframes floatEmoji {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(5deg); }
 }
 
-/* Responsive Design */
+/* ======================
+   RESPONSIVE — TABLET (768px)
+   ====================== */
 @media (max-width: 768px) {
   .adventure-title {
     font-size: clamp(1.8rem, 6vw, 2.2rem);
@@ -581,13 +498,8 @@
     font-size: 0.95rem;
   }
 
-  .cloud {
-    font-size: 2rem;
-  }
-
-  .floating-emoji {
-    font-size: 2rem;
-  }
+  .cloud          { font-size: 2rem; }
+  .floating-emoji { font-size: 2rem; }
 
   #theme-toggle-btn {
     width: 55px;
@@ -595,9 +507,7 @@
     font-size: 1.8rem;
   }
 
-  .grass-hills {
-    height: 100px;
-  }
+  .grass-hills { height: 100px; }
 
   .hill-1,
   .hill-2,
@@ -606,6 +516,9 @@
   }
 }
 
+/* ======================
+   RESPONSIVE — MOBILE (480px)
+   ====================== */
 @media (max-width: 480px) {
   .intro-content {
     padding: var(--spacing-lg) var(--spacing-md);
@@ -644,17 +557,9 @@
     font-size: 1.2rem;
   }
 
-  .enter-hint {
-    font-size: 0.85rem;
-  }
-
-  .floating-emoji {
-    font-size: 1.5rem;
-  }
-
-  .cloud {
-    font-size: 1.5rem;
-  }
+  .enter-hint     { font-size: 0.85rem; }
+  .floating-emoji { font-size: 1.5rem;  }
+  .cloud          { font-size: 1.5rem;  }
 
   #theme-toggle-btn {
     width: 50px;

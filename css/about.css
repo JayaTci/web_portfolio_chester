@@ -1,16 +1,20 @@
-/* About Page Styles */
+/* ==============================================
+   ABOUT PAGE STYLES
+   About me, skills, contact, and form sections
+   ============================================== */
 
-/* Import Works page styles for header */
-@import './works.css';
-
-/* Main Content */
+/* ======================
+   MAIN CONTENT
+   ====================== */
 .about-page .main-content {
   padding-top: var(--spacing-2xl);
   padding-bottom: var(--spacing-2xl);
   animation: fadeIn var(--duration-slow) var(--ease-out-expo);
 }
 
-/* About Content */
+/* ======================
+   BIO SECTION
+   ====================== */
 .about-content {
   max-width: 800px;
 }
@@ -30,7 +34,9 @@
   margin-bottom: 0;
 }
 
-/* Contact Section */
+/* ======================
+   CONTACT SECTION
+   ====================== */
 .contact-section {
   margin-bottom: var(--spacing-lg);
   padding-top: var(--spacing-xl);
@@ -51,7 +57,9 @@
   opacity: 0.7;
 }
 
-/* Social Links */
+/* ======================
+   SOCIAL LINKS
+   ====================== */
 .social-links {
   display: flex;
   flex-direction: column;
@@ -90,6 +98,7 @@
   transform: translateX(2px);
 }
 
+/* Email copy button — shows "Copied!" confirmation via pseudo-element */
 .email-copy-btn {
   position: relative;
 }
@@ -101,7 +110,10 @@
   animation: fadeOut 2s ease-out forwards;
 }
 
-/* Accordion */
+/* ======================
+   ACCORDION
+   Collapsible "Let's Connect" section
+   ====================== */
 .accordion-section {
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-xl);
@@ -128,6 +140,7 @@
   opacity: 0.7;
 }
 
+/* Rotates 45deg when expanded to turn + into × */
 .accordion-icon {
   display: inline-flex;
   align-items: center;
@@ -143,6 +156,7 @@
   transform: rotate(45deg);
 }
 
+/* Animated height collapse using max-height trick */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -157,7 +171,9 @@
   padding-top: var(--spacing-lg);
 }
 
-/* Skills Section */
+/* ======================
+   SKILLS SECTION
+   ====================== */
 .skills-section {
   margin-bottom: var(--spacing-2xl);
   padding-bottom: var(--spacing-xl);
@@ -216,7 +232,9 @@
   border-color: var(--color-text);
 }
 
-/* Contact Form Section */
+/* ======================
+   CONTACT FORM SECTION
+   ====================== */
 .contact-form-section {
   margin-top: var(--spacing-2xl);
   padding-top: var(--spacing-xl);
@@ -235,6 +253,7 @@
   max-width: 600px;
 }
 
+/* Form Fields */
 .form-group {
   margin-bottom: var(--spacing-lg);
 }
@@ -272,6 +291,7 @@
   min-height: 120px;
 }
 
+/* Submit Button */
 .form-submit-btn {
   display: inline-flex;
   align-items: center;
@@ -281,7 +301,7 @@
   font-weight: 600;
   font-family: inherit;
   color: #000000;
-  background-color: #ffffff;;
+  background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 4px;
   cursor: pointer;
@@ -307,6 +327,7 @@
   transform: translateX(4px);
 }
 
+/* Form Status Message (success / error) */
 .form-status {
   margin-top: var(--spacing-md);
   padding: var(--spacing-sm);
@@ -329,7 +350,9 @@
   border: 1px solid #ef4444;
 }
 
-/* Responsive Design */
+/* ======================
+   RESPONSIVE — TABLET (768px)
+   ====================== */
 @media (max-width: 768px) {
   .about-content {
     max-width: 100%;
@@ -401,6 +424,9 @@
   }
 }
 
+/* ======================
+   RESPONSIVE — MOBILE (480px)
+   ====================== */
 @media (max-width: 480px) {
   .about-page .main-content {
     padding-top: var(--spacing-lg);
@@ -422,6 +448,7 @@
     gap: var(--spacing-lg);
   }
 
+  /* Card-style skill categories on small screens */
   .skill-category {
     background-color: var(--color-surface);
     padding: var(--spacing-md);
@@ -479,6 +506,7 @@
     font-size: 0.9rem;
   }
 
+  /* Prevent iOS zoom on input focus */
   .form-input,
   .form-textarea {
     font-size: 16px;

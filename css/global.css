@@ -1,7 +1,14 @@
-/* Global Styles */
+/* ==============================================
+   GLOBAL STYLES
+   Base styles shared across all pages
+   ============================================== */
 
+/* ======================
+   BASE
+   ====================== */
 html {
   font-size: var(--font-size-base);
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
@@ -20,13 +27,15 @@ body {
   transition: var(--transition-theme);
 }
 
-/* Selection */
+/* Text Selection */
 ::selection {
   background-color: var(--color-text);
   color: var(--color-bg);
 }
 
-/* Typography */
+/* ======================
+   TYPOGRAPHY
+   ====================== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: var(--line-height-tight);
@@ -44,6 +53,9 @@ p {
   margin-bottom: var(--spacing-sm);
 }
 
+/* ======================
+   LINKS
+   ====================== */
 a {
   color: var(--color-text);
   text-decoration: none;
@@ -54,12 +66,9 @@ a:hover {
   opacity: 0.7;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Container */
+/* ======================
+   LAYOUT
+   ====================== */
 .container {
   width: 100%;
   max-width: var(--max-content-width);
@@ -67,7 +76,11 @@ html {
   padding: 0 var(--padding-side);
 }
 
-/* Utility Classes */
+/* ======================
+   UTILITY CLASSES
+   ====================== */
+
+/* Visually hidden but accessible to screen readers */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -80,23 +93,17 @@ html {
   border: 0;
 }
 
-/* Fade Animations */
+/* ======================
+   ANIMATIONS
+   ====================== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
 
 .fade-in {
@@ -107,7 +114,10 @@ html {
   animation: fadeOut var(--duration-base) ease-out;
 }
 
-/* Resume Button */
+/* ======================
+   RESUME BUTTON
+   Shared across home.html and about.html headers
+   ====================== */
 .resume-btn {
   display: inline-flex;
   align-items: center;
@@ -159,7 +169,30 @@ html {
   transform: translateY(0);
 }
 
-/* Mobile Touch Improvements */
+/* ======================
+   THEME TOGGLE — EMOJI ICONS
+   Controls visibility of sun/moon emoji based on active theme.
+   Used in index.html (intro) and home.html / about.html (header).
+   ====================== */
+.sun-emoji,
+.moon-emoji {
+  display: block;
+  line-height: 1;
+}
+
+/* In light mode, hide the moon */
+[data-theme="light"] .moon-emoji {
+  display: none;
+}
+
+/* In dark mode, hide the sun */
+[data-theme="dark"] .sun-emoji {
+  display: none;
+}
+
+/* ======================
+   RESPONSIVE — MOBILE
+   ====================== */
 @media (max-width: 768px) {
   html {
     font-size: 16px;
@@ -170,14 +203,13 @@ html {
     line-height: 1.6;
   }
 
-  /* Ensure minimum tap target size (44x44px) */
+  /* Ensure minimum tap target size (44x44px) for accessibility */
   button,
   a {
     min-height: 44px;
     min-width: 44px;
   }
 
-  /* Improve readability */
   h1 {
     font-size: 2rem;
     line-height: 1.3;

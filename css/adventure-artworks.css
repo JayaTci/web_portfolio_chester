@@ -1,7 +1,7 @@
-
-/* ============================================
+/* ==============================================
    ADVENTURE TIME ANIMATED ARTWORKS
-   ============================================ */
+   Project card illustrations with CSS animations
+   ============================================== */
 
 /* Base Adventure Artwork Container */
 .adventure-artwork {
@@ -469,21 +469,4 @@
   }
 }
 
-/* Theme Toggle Emoji Style */
-.theme-toggle-btn {
-  font-size: 1.5rem;
-}
-
-.sun-emoji,
-.moon-emoji {
-  display: block;
-  line-height: 1;
-}
-
-[data-theme="light"] .moon-emoji {
-  display: none;
-}
-
-[data-theme="dark"] .sun-emoji {
-  display: none;
-}
+/* Theme toggle emoji styles are defined in global.css */
