@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website
 
 A modern, minimalist portfolio website with light/dark theme support, inspired by contemporary web design aesthetics.
@@ -186,3 +187,6 @@ Free to use and customize for your personal portfolio.
 ---
 
 Built with HTML, CSS, and JavaScript. No frameworks, no dependencies, just clean code.
+=======
+
+>>>>>>> 4b2be829452b33127f8ccb5b8ac01578c1eb8296
